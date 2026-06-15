@@ -3,7 +3,7 @@
 const os = require('os');
 const path = require('path');
 
-const APP_NAME = 'log-parser-dace8f';
+const APP_NAME = 'log-parser-f98e06';
 const VERSION = '1.4.0';
 
 class logparserHandler {
